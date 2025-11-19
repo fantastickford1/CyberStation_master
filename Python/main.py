@@ -1,10 +1,9 @@
 import sys
 
 from PySide6.QtGui import QGuiApplication
-from PySide6.QtQml import QQmlApplicationEngine, qmlRegisterType
+from PySide6.QtQml import QQmlApplicationEngine
 
 from autogen.settings import setup_qt_environment
-from models.computer_list_model import ComputerListModel
 
 # Import here the Python files that define QML elements
 
@@ -12,15 +11,6 @@ from models.computer_list_model import ComputerListModel
 def main():
     app = QGuiApplication(sys.argv)
     engine = QQmlApplicationEngine()
-    
-    # Register QML types
-    qmlRegisterType(ComputerListModel, "CyberMaster", 1, 0, "ComputerListModel")
-    
-    # Create computer model and set as context property
-    computer_model = ComputerListModel()
-    engine.rootContext().setContextProperty("computerModel", computer_model)
-    
-    print(f"Computer model created with {computer_model.rowCount()} computers")
 
     setup_qt_environment(engine)
 

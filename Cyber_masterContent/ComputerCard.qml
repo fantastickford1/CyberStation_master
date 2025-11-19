@@ -98,7 +98,7 @@ Rectangle {
                 anchors.fill: parent
                 enabled: model.status === "busy"
                 cursorShape: enabled ? Qt.PointingHandCursor : Qt.ArrowCursor
-                onClicked: root.setTimerRequested(model.index)
+                onClicked: root.setTimerRequested(index)
             }
         }
 
@@ -135,7 +135,7 @@ Rectangle {
                 text: "Clear Timer"
                 background: Rectangle { radius: 14; color: "#fff3cd"; border.color: "#f39c12"; border.width: 2 }
                 contentItem: Text { color: "#f39c12"; text: parent.text; font.bold: true }
-                onClicked: root.clearTimerRequested(model.index)
+                onClicked: root.clearTimerRequested(index)
             }
 
             // START / END & PAY BUTTON
@@ -157,9 +157,9 @@ Rectangle {
 
                 onClicked: {
                     if (model.status === "busy") {
-                        root.endSessionRequested(model.index)
+                        root.endSessionRequested(index)
                     } else {
-                        root.startSessionRequested(model.index)
+                        root.startSessionRequested(index)
                     }
                 }
             }

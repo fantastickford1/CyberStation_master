@@ -117,7 +117,7 @@ Rectangle {
                 ListView {
                     id: listView
                     spacing: 20
-                    model: root.computerModel
+                    model: computerModel
                     delegate: ComputerCard {
                         id: computerCard
                         
