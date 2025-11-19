@@ -1,0 +1,15 @@
+<RCC>
+    <qresource>
+        <file>Cyber_master.qmlproject</file>
+        <file>Cyber_master/Constants.qml</file>
+        <file>Cyber_master/EventListModel.qml</file>
+        <file>Cyber_master/EventListSimulator.qml</file>
+        <file>Cyber_master/qmldir</file>
+        <file>Cyber_masterContent/App.qml</file>
+        <file>Cyber_masterContent/ComputerCard.qml</file>
+        <file>Cyber_masterContent/MainDashboard.ui.qml</file>
+        <file>Cyber_masterContent/PaymentPopup.qml</file>
+        <file>Cyber_masterContent/TimerPopup.qml</file>
+        <file>qtquickcontrols2.conf</file>
+    </qresource>
+</RCC>
